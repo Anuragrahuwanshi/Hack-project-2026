@@ -1,56 +1,53 @@
-
-<div align="center">
-
 # 🌾 FarmConnect
 ### Direct Farmer-to-Consumer Digital Marketplace
 
 **Connecting farmers directly with consumers through a digital marketplace.**
 
-<p>
-  <img src="https://img.shields.io/badge/BGI-Hackathon%202026-2e7d32?style=for-the-badge" alt="BGI Hackathon 2026"/>
-  <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-blue?style=for-the-badge" alt="Frontend stack"/>
-  <img src="https://img.shields.io/badge/Status-Prototype-orange?style=for-the-badge" alt="Prototype status"/>
+<p align="center">
+  <img src="https://img.shields.io/badge/BGI-Hackathon%202026-2e7d32?style=for-the-badge" alt="BGI Hackathon 2026" />
+  <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-blue?style=for-the-badge" alt="Frontend technologies" />
+  <img src="https://img.shields.io/badge/Backend-Node.js%20%7C%20Express.js-green?style=for-the-badge" alt="Backend technologies" />
+  <img src="https://img.shields.io/badge/Status-Prototype-orange?style=for-the-badge" alt="Prototype status" />
 </p>
-
-</div>
 
 ---
 
 ## 📌 About the Project
 
-The **Direct Farmer-to-Consumer Digital Marketplace Platform** is a hackathon project designed to connect farmers directly with consumers.
+**FarmConnect** is a hackathon project that aims to connect farmers directly with consumers through a digital agricultural marketplace.
 
-The platform aims to reduce dependence on intermediaries, improve price transparency, and make agricultural produce more accessible to buyers.
+The project focuses on improving product discovery, encouraging transparent pricing, and helping farmers reach potential buyers through a digital platform.
 
 ## 🎯 Problem Statement
 
-Farmers may struggle to reach buyers directly and receive fair prices for their produce. Consumers may also have limited visibility into product availability and pricing.
+Farmers can face challenges reaching customers directly, while consumers may have difficulty discovering locally available agricultural produce and comparing prices.
 
-Our idea is to create a digital platform that makes it easier for farmers and consumers to connect.
+Traditional supply chains can involve multiple intermediaries, making direct communication between farmers and buyers more difficult.
 
 ## 💡 Proposed Solution
 
-- 🌱 Provide a digital space for farmers to showcase their produce.
-- 🛒 Help consumers discover available agricultural products.
-- 💰 Promote transparent product pricing.
-- 🤝 Encourage direct connections between farmers and buyers.
-- 📦 Explore convenient order and delivery management.
+FarmConnect aims to provide a common digital platform where:
 
-*These describe the project goals. Actual functionality should be confirmed against the current implementation.*
+- 🌱 Farmers can showcase their agricultural produce.
+- 🛒 Consumers can discover available products.
+- 💰 Buyers can view product prices.
+- 🤝 Farmers and consumers can connect more directly.
+- 📦 Order and delivery processes can be managed as the platform develops.
 
 ## ✨ Key Features
 
-Update this section as you verify the prototype.
+The following checklist should reflect the **actual implementation status** of the current prototype.
 
 - [ ] Farmer and consumer registration
-- [ ] Product listings and availability
+- [ ] Product listing and availability management
 - [ ] Product search and browsing
-- [ ] Transparent pricing
+- [ ] Product pricing display
 - [ ] Order management
 - [ ] Payment integration
 - [ ] Delivery tracking
 
-## 🛠️ Technology Stack
+> Update these checkboxes after testing each feature. Do not mark a feature complete just because it is part of the project plan.
+
 ## 🛠️ Technology Stack
 
 ### Frontend
@@ -64,28 +61,20 @@ Update this section as you verify the prototype.
 
 ### Database
 - MongoDB
-- Mongoose (MongoDB object modeling)
+- Mongoose
 
-### Authentication & Security
+### Authentication and Security Libraries
 - bcryptjs — password hashing
 - JSON Web Token (JWT) — token-based authentication
+
+### Other Libraries and Tools
+- Multer — file uploads
+- dotenv — environment variable configuration
 - CORS — cross-origin request handling
 - Cookie Parser — cookie handling
-
-### File Uploads & Configuration
-- Multer — file upload handling
-- dotenv — environment variable configuration
-
-### Development Tools
-- Nodemon — automatic server restart during development
-- npm — package management
-- Git & GitHub — version control
-- Visual Studio Code — code editor
-
-### License
-- MIT
-
-
+- Nodemon — development server restart
+- npm — dependency management
+- Git and GitHub — version control
 
 ## 📂 Project Structure
 
@@ -93,18 +82,47 @@ Update this section as you verify the prototype.
 Hack-project-2026/
 ├── .cursor/
 ├── HOME/
+│   ├── FARMER/
+│   ├── Home Page/
+│   │   ├── index.html
+│   │   ├── Style.css
+│   │   └── Script.js
+│   ├── _admin/
+│   ├── help/
+│   └── shared/
 ├── server/
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── uploads/
+│   ├── .env.example
+│   ├── package.json
+│   ├── package-lock.json
+│   └── server.js
 ├── LICENSE
 ├── README.md
 └── package-lock.json
 ```
+
+### Main Components
+
+- **Frontend:** User interface files organized under `HOME/`.
+- **Backend:** Node.js and Express server code organized under `server/`.
+- **Routes and Controllers:** Backend request-handling modules.
+- **Models:** Database-related model files.
+- **Configuration:** Server configuration and environment variable template.
+- **Documentation:** Project overview, setup instructions, and license.
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Git
-- Node.js and npm, if required by the project configuration
+- Node.js and npm
+- MongoDB configured for the backend
+- A code editor such as Visual Studio Code
 
 ### 1. Clone the repository
 
@@ -113,35 +131,66 @@ git clone https://github.com/Anuragrahuwanshi/Hack-project-2026.git
 cd Hack-project-2026
 ```
 
-### 2. Install dependencies
+### 2. Install backend dependencies
 
-Check the `HOME` and `server` directories for their `package.json` files. Run `npm install` inside the relevant directory.
+```bash
+cd server
+npm install
+```
 
-### 3. Run the project
+### 3. Configure environment variables
 
-Check the `scripts` section of the relevant `package.json` file to find the correct startup command.
+Create a `.env` file inside the `server/` directory using `.env.example` as a reference.
 
-**Note:** The exact commands depend on the repository's current configuration.
+On Windows PowerShell, you can use:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Open `.env` and fill in the required values according to the existing project configuration. Do not commit secrets, passwords, or private database credentials to GitHub.
+
+### 4. Start the backend
+
+For development:
+
+```bash
+npm run dev
+```
+
+Or use:
+
+```bash
+npm start
+```
+
+Ensure MongoDB and the required environment variables are configured before starting the server.
+
+### 5. Open the frontend
+
+Open `HOME/Home Page/index.html` in your browser, or use the VS Code Live Server extension if appropriate for the project.
+
+**Note:** The frontend and backend may require additional configuration to communicate correctly. Verify the application's actual startup flow before describing these instructions as fully tested.
 
 ## 📸 Screenshots and Demo
 
-Add screenshots of the actual working prototype here.
+Add screenshots from the actual project to help visitors understand the interface.
 
-Suggested screenshots:
+Suggested screenshots, if implemented:
+
 - Home page
-- Product listings
-- Farmer dashboard
-- Consumer experience
-
-Only include screens that exist in the project.
+- Farmer interface
+- Product listing page
+- Admin interface
+- Consumer browsing experience
 
 ## 👥 Project Contributors
 
-- **Anurag Raghuwanshi** — [GitHub](https://github.com/Anuragrahuwanshi)
-- **Aryan Kharwar** — [GitHub](https://github.com/aryankhrwar964-sudo)
-- **Chetan Patel** — [GitHub](https://github.com/CHETAN-PATEL-1)
-- **Harsh Dubey** — [GitHub](https://github.com/harshdubey-ops)
-- **Priya Lowanshi** — [GitHub](https://github.com/priyalowanshi60-123)
+- **Anurag Raghuwanshi** — [GitHub Profile](https://github.com/Anuragrahuwanshi)
+- **Aryan Kharwar** — [GitHub Profile](https://github.com/aryankhrwar964-sudo)
+- **Chetan Patel** — [GitHub Profile](https://github.com/CHETAN-PATEL-1)
+- **Harsh Dubey** — [GitHub Profile](https://github.com/harshdubey-ops)
+- **Priya Lowanshi** — [GitHub Profile](https://github.com/priyalowanshi60-123)
 
 ## 🔮 Future Scope
 
@@ -149,18 +198,17 @@ Only include screens that exist in the project.
 - Better product discovery and price comparison
 - Secure payment integration
 - Order and delivery tracking
-- Mobile-friendly user experience
+- Responsive, mobile-friendly interface
+- Further improvements to the farmer and consumer experience
 
 ## 📄 License
 
-Refer to the repository's [LICENSE](LICENSE) file for licensing information.
+See the [LICENSE](LICENSE) file for the project's licensing terms.
 
 ---
 
-<div align="center">
-
-**Building a more connected agricultural marketplace 🌱**
-
-Made with 💚 by the project team for BGI Hackathon 2026.
-
-</div>
+<p align="center">
+  <strong>Building a more connected agricultural marketplace 🌱</strong>
+  <br />
+  Made with 💚 by the FarmConnect project team for BGI Hackathon 2026.
+</p>
