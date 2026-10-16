@@ -52,13 +52,33 @@ Update this section as you verify the prototype.
 
 ## 🛠️ Technology Stack
 
-| Technology | Purpose |
-|---|---|
-| HTML | Page structure |
-| CSS | Styling and layout |
-| JavaScript | Frontend interactions |
-| Server-side technologies | To be confirmed from the server code |
-
+{
+  "name": "farm2consumer-server",
+  "version": "0.1.0",
+  "description": "Backend for Farmer-to-Consumer marketplace (Express + MongoDB)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^7.0.4",
+    "multer": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
 ## 📂 Project Structure
 
 ```text
