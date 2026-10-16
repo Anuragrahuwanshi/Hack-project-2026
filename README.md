@@ -51,34 +51,42 @@ Update this section as you verify the prototype.
 - [ ] Delivery tracking
 
 ## 🛠️ Technology Stack
+## 🛠️ Technology Stack
 
-{
-  "name": "farm2consumer-server",
-  "version": "0.1.0",
-  "description": "Backend for Farmer-to-Consumer marketplace (Express + MongoDB)",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "colors": "^1.4.0",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^7.0.4",
-    "multer": "^2.1.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
-  }
-}
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+- Mongoose (MongoDB object modeling)
+
+### Authentication & Security
+- bcryptjs — password hashing
+- JSON Web Token (JWT) — token-based authentication
+- CORS — cross-origin request handling
+- Cookie Parser — cookie handling
+
+### File Uploads & Configuration
+- Multer — file upload handling
+- dotenv — environment variable configuration
+
+### Development Tools
+- Nodemon — automatic server restart during development
+- npm — package management
+- Git & GitHub — version control
+- Visual Studio Code — code editor
+
+### License
+- MIT
+
+
+
 ## 📂 Project Structure
 
 ```text
